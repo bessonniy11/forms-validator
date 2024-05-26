@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="../img/icons/ubeyus-logo.svg">
+    <link rel="shortcut icon" href="../img/icons/ubeyus-logo.svg">
+    <title>Forms Validator Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <main>
+            <section class="page">
+
+                <div class="form__container">
+
+                    <form class="form" id="firstForm">
+                        <div class="form-item" aria-required="false" field-name="firstName">
+                            <label class="form-item-label">
+                                First Name <span class="required-item">*</span>
+                            </label>
+                            <input placeholder="Enter Name" type="text" name="name" class="form-item-input">
+                            <span class="form-item-confirm-check"></span>
+                        </div>
+
+                        <div class="form-item" aria-required="true" field-name="email">
+                            <label class="form-item-label">
+                                Email Address <span class="required-item">*</span>
+                            </label>
+                            <input placeholder="Enter email" type="text" name="email" class="form-item-input">
+                            <span class="form-item-confirm-check"></span>
+                        </div>
+
+                        <div class="form-item" aria-required="false" field-name="login">
+                            <label class="form-item-label">
+                                Login <span class="required-item">*</span>
+                            </label>
+                            <input placeholder="Enter Login" type="text" name="login" class="form-item-input">
+                            <span class="form-item-confirm-check"></span>
+                        </div>
+
+                        <div class="form-item" aria-required="true" field-name="phone">
+                            <label class="form-item-label">
+                                Phone Number <span class="required-item">*</span>
+                            </label>
+                            <span class="phone-pre">+7 </span>
+                            <input placeholder="(000) 000 0000" name="phone" type="tel" data-tel-input class="form-item-input form-item-input-phone">
+                            <span class="form-item-confirm-check"></span>
+                        </div>
+
+                        <div class="form-item" aria-required="true" field-name="message">
+                            <label class="form-item-label">
+                                Message <span class="required-item">*</span>
+                            </label>
+                            <textarea placeholder="Enter Message" name="message" type="text" class="form-item-input scroll-style-slim"></textarea>
+                            <span class="form-item-confirm-check"></span>
+                        </div>
+
+                        <div class="form-item form-item-select" aria-required="false" field-name="selectValue1">
+                            <label class="form-item-label">
+                                Select an option
+                            </label>
+                            <div class="nice-select" tabindex="0">
+                                <span class="current">Select</span>
+                                <ul class="list scroll-style-slim">
+                                    <li data-value="Select" class="option">Select</li>
+                                    <li data-value="Option 1" class="option">Option 1</li>
+                                    <li data-value="Option 2" class="option">Option 2</li>
+                                    <li data-value="Other" class="option">Other</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form-item form-item-select" aria-required="true" field-name="selectValue2">
+                            <label class="form-item-label">
+                                Select an option
+                            </label>
+                            <div class="nice-select" tabindex="0">
+                                <span class="current">Select</span>
+                                <ul class="list scroll-style-slim">
+                                    <li data-value="Select" class="option">Select</li>
+                                    <li data-value="Option 1" class="option">Option 1</li>
+                                    <li data-value="Option 2" class="option">Option 2</li>
+                                    <li data-value="Other" class="option">Other</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form-item form-item-checkbox" aria-required="true" field-name="checkboxValue1">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" class="" checked>
+                                <span class="checkmark">
+                                    <span class="checkmark-check"></span>
+                                </span>
+                                <div class="custom-checkbox-label">Label text</div>
+                            </label>
+                        </div>
+
+                        <div class="form-item form-item-checkbox" aria-required="false" field-name="checkboxValue2">
+                            <label class="custom-checkbox tumbler">
+                                <input type="checkbox" class="" checked>
+                                <span class="checkmark">
+                                    <span class="checkmark-check"></span>
+                                </span>
+                                <div class="custom-checkbox-label">Label text</div>
+                            </label>
+                        </div>
+
+                        <button class="btn-white form-btn" id="sendFirstForm">Send</button>
+
+                    </form>
+                    
+                    <form class="form" id="secondForm">
+
+                        <div class="form-item" aria-required="true" field-name="login">
+                            <label class="form-item-label">
+                                Login <span class="required-item">*</span>
+                            </label>
+                            <input placeholder="Enter Login" type="text" name="login" class="form-item-input">
+                            <span class="form-item-confirm-check"></span>
+                        </div>
+
+                        <div class="form-item" aria-required="true" field-name="password">
+                            <label class="form-item-label">
+                                Password <span class="required-item">*</span>
+                            </label>
+                            <input placeholder="Enter Password" type="password" name="password" class="form-item-input">
+                            <span class="form-item-confirm-check"></span>
+                        </div>
+
+                        <div class="form-item" aria-required="true" field-name="passwordConfirm">
+                            <label class="form-item-label">
+                                Password Confirm<span class="required-item">*</span>
+                            </label>
+                            <input placeholder="Enter Password Confirm" type="password" name="passwordConfirm" class="form-item-input">
+                            <span class="form-item-confirm-check"></span>
+                        </div>
+
+                        <div class="form-item form-item-checkbox" aria-required="true">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" class="" checked>
+                                <span class="checkmark">
+                                    <span class="checkmark-check"></span>
+                                </span>
+                                <div class="custom-checkbox-label">Do you agree with the security policy?</div>
+                            </label>
+                        </div>
+
+                        <button class="btn-white form-btn" id="sendSecondForm">Send</button>
+
+                    </form>
+
+                </div>
+
+            </section>
+            
+        </main>
+
+    </div>
+
+    <script src="../js/nice-select.min.js"></script>
+    <script src="../js/forms-validator.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
